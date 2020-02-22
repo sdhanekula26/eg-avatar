@@ -1,0 +1,5 @@
+<div [ngStyle]="getStyles()" *ngIf="!src || hideImage">
+    {{displayShortName}}
+</div>
+
+<img [src]="src" [alt]="altName" [ngStyle]="getImgStyles()" (error)="hideImage = true" *ngIf="src && !hideImage">
